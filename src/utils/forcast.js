@@ -9,7 +9,7 @@ const forcast = (lat, long, callback) => {
      if (res.cod === '400') {
        callback(undefined,'Invalid latitude or longitude.' + res.message)
      } else {
-       callback('It is currently '+ res.current.temp + ' degree.' + 'Chance of rain: ' + res.daily[0].weather[0].description,undefined)
+       callback('It is currently '+ res.current.temp + ' degrees.' + 'Today\'s maximum temprature: '+ res.daily[0].temp.max + ' degrees.' + 'Today\'s minimum temprature: '+ res.daily[0].temp.min + ' degrees.' + 'Chance of rain: ' + res.daily[0].weather[0].description,undefined)
      }
    } )
    .catch(e => callback(undefined, 'unable to connect to the network.'))
