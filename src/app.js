@@ -1,7 +1,6 @@
 const geocode = require('./utils/geocode')
 const forcast = require('./utils/forcast')
 
-
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
