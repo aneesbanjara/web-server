@@ -10,7 +10,7 @@ search.addEventListener('click', (e) => {
   message1.textContent = 'Loading..'
   message2.textContent = ''
 
-  fetch('http://localhost:3000/weather?address='+ value +' ').then((res) => {res.json().then((res) =>{
+  fetch('/weather?address='+ value +' ').then((res) => {res.json().then((res) =>{
   if(res.error) {
     message1.textContent = res.error
       message2.textContent = ''
